@@ -56,9 +56,18 @@ public class Array
     void toHexString()
     {
         String hexArray[] = new String[myArray.length];
-
+        int a = 0;
         for (int i = 0; i < myArray.length; i++) 
                 hexArray[i] = Integer.toHexString(myArray[i]);
-        System.out.println(Arrays.toString(hexArray));
+        String myArray2[] = new String[5];
+        for (int i = 0; i < hexArray.length; i++) {
+            for (int j = 0; j < hexArray[i].length(); j++) {
+                if (hexArray[i].charAt(j) >= 'a' && hexArray[i].charAt(j) <= 'f') {
+                    myArray2[a] = hexArray[i];
+                    a++;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(myArray2));
     }
 }

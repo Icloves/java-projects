@@ -56,7 +56,7 @@ public class Main
                     array.Digit(digit);
                     break;
                 case 5: //hex radix
-                    System.out.println("Enter amount of hex radix array");
+                    System.out.println("This is your new array:");
                     array.toHexString();
                     break;
                 case 6: //exit
