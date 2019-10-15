@@ -1,5 +1,6 @@
 package com.company;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Text {
@@ -37,21 +38,35 @@ public class Text {
     void parsep(String text){
         int count = 0;
         int a = 0;
-        int i = 0;
-        String newtext[] = new String[text.length()];
+        //int i = 0;
+        //String newtext = "";
+        String newtext[] = new String[1];
+        String temp = "";
+        System.out.println(Arrays.toString(newtext));
+        //ArrayList<String> newtext = new ArrayList<String>();
 //        for (int i = 0; '\n' != text.charAt(i); i++) {
+//            //newtext.add(a, String.valueOf(text.charAt(i)));
 //            if (text.charAt(i) == '.' || text.charAt(i) == '!' || text.charAt(i) == '?')
 //                if (text.charAt(i + 1) == ' ' && text.charAt(i + 1) != '\n')
-//                    if (Character.isUpperCase(text.charAt(i + 2)))
-//                        ;
+//                    if (Character.isUpperCase(text.charAt(i + 2))) {
+//                        newtext.add(a, String.valueOf(text.charAt('\n')));
+//                        a++;
+//                    }
+        int i = 0;
         while (text.charAt(i) != '\n')
         {
-            if (text.charAt(i) == '.')
-                newtext[a] = String.valueOf(text.charAt(i));
-            a++;
+            temp += text.charAt(i);
+            if (text.charAt(i + 1) == '\n'){
+                newtext[0] = temp.replace(". ", ".\n");
+            }
             i++;
         }
+        newtext[0] += '\n';
+        newtext[0] += text.substring('\n');
         System.out.println(Arrays.toString(newtext));
-
     }
+//    void edittext(String text, String newtext)
+//    {
+//
+//    }
 }
