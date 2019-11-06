@@ -6,7 +6,7 @@ public class Text {
     String newtext = "";
     void paragraph(String text) {
         if (newtext == "") { // operator '==' same with 'equals(oper)'
-            int count = 0;
+            int count = 1;
             for (int i = 0; i < text.length(); i++)
                 if (text.charAt(i) == '\n')
                     count++;
@@ -14,7 +14,7 @@ public class Text {
         }
         else
         {
-            int count = 0;
+            int count = 1;
             for (int i = 0; i < newtext.length(); i++)
                 if (newtext.charAt(i) == '\n')
                     count++;
@@ -67,7 +67,7 @@ public class Text {
             countpar--;
             i++;
             //System.out.println(count);
-            System.out.println(Arrays.toString(newarr));
+            System.out.println(newarr[0]);
         }
     }
 

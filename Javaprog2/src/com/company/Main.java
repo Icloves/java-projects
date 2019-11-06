@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         Text text = new Text();
+        BuildBuff buff = new BuildBuff();
         Scanner scanner = new Scanner(System.in);
         int task;
         boolean a = true;
@@ -21,7 +22,8 @@ public class Main {
                     "2. Found the time talks\n" +
                     "3. Split first paragraphs\n" +
                     "4. Out edit test\n" +
-                    "5. Exit\n");
+                    "5. delete the large paragraph\n" +
+                    "0. Exit\n");
             task = scanner.nextByte();
             switch (task) {
                 case 1: text.paragraph(mytext);
@@ -32,7 +34,9 @@ public class Main {
                     break;
                 case 4: text.edittext();
                     break;
-                case 5: a = false;
+                case 5: buff.delete_the_large_paragraph(mytext);
+                    break;
+                case 0: a = false;
                     break;
             }
         }
